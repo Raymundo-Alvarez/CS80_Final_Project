@@ -1,0 +1,354 @@
+<!DOCTY html>
+<!-- This is my Project for the course. -->
+<!-- The intention of this project is for the user is able to use this program -->
+<!-- to calculate a budger for the month. Ideally, the target audience are -->
+<!-- college students and young adults. -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Budget Calculator</title>  
+		<style type = "text/css">
+		body	{
+				background-color: coral;
+				}
+		h1		{
+				color: crimson;
+				text-align: center;
+				background-color: white;
+				text-decoration: underline
+				}
+		p		{
+				text-indent: 50px;
+				font-family: "Times New Roman";
+				font-size: 20px;
+				background-color: white;
+				color: maroon;
+				}
+		div		{
+				text-align: center;
+				width: 50%;
+				position: relative;
+				left: 25%;
+				border-width: 6x;
+				}
+		table, td, th	{
+				border: 1px solid #ddd;
+				text-align: center;
+				}
+		table	{
+				border-collapse: collapse;
+				width: 100%;
+				}
+		th, td	{
+				padding: 15px;
+				}
+		tr:nth-child(even)	{
+				background-color: #f2f2f2
+				}
+		th		{
+				background-color: #4CAF50;
+				color: white;
+				}
+		.thick	{
+				border-style: thick;
+				}
+		.solid	{
+				border-style: thick;
+				background-color: white;
+				}
+		.double	{
+				border-style: double;
+				}
+		.green	{
+				border-color: green;
+				}
+		.center	{
+				text-align: center;
+				}
+		.crimson	{
+				color: crimson
+					}
+		.absolute	{
+				position: absolute;
+				}
+		textarea {
+				width: 100%;
+				height: 150px;
+				padding: 12px 20px;
+				box-sizing: border-box;
+				border: 2px solid #ccc;
+				border-radius: 4px;
+				background-color: #f8f8f8;
+				font-size: 16px;
+				resize: none;
+}
+		#evaluation-color-form 	{
+			background-color: pink
+			}
+		</style>
+	</head>
+	
+	<head>
+		<body>
+			<head>
+				<div class = "thick solid double green"><h1>Simple Budget Calculator for the Young Adult and College Student</div></h1>
+			</head>
+			
+			<div class = "solid double green"><p>	As you transition from being a high school student to becoming a young adult, it is essential 
+				for you to become familiarized with a budget. By having a budget, it allows you to become 
+				financially independent, financially stable, and be a self-sufficient individual. However, setting a budget does not have
+				to be a difficult task. The key ingredient to a successful budget is
+				keeping a consistancy every month.More importantly,however, it is vital to realize that your budget should be a realistic 
+				accomplishment. Saving every penny it is not always a satisfying lifestyle.</div></p>
+				
+			<div class = "solid double green"><p>To begin this budget, you should list all the items that you purchase in a month. Some items
+				that you purchase every month will be fixed such as rent, utilities, car insurance, cable bill, credit card payment, bus pass,
+				gym membership,or student loan. Other items, however, are not fixed and will vary depending on how much you contribute on its 
+				spending. Some examples of these items are gas, groceries, dinning out, textbook purchases, and miscellaneous spending.</div></p>
+		
+		</body>
+		<body>
+			<div class = "solid double green">
+			<table border = "1" align= "center" cellspacing= "3" cellpadding= "3">
+				<thead>
+					<div class = "green">
+					<tr>
+						<th>BUDGET</th>
+						<th>$</th>
+						<th>Amount</th>
+					</div>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Checking Account</td>
+						<td>$</td>
+						<td><input id= "checkingAccount" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Employment Income</td>
+						<td>$</td>
+						<td><input id= "employmentIncome" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Additional Income</td>
+						<td>$</td>
+						<td><input id="additionalIncome" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Savings Account</td>
+						<td>$</td>
+						<td><input id="savingsAccount" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Rent</td>
+						<td>$</td>
+						<td><input id= "expense1" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Car Insurance</td>
+						<td>$</td>
+						<td><input id="expense2" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Car Monthly Installment</td>
+						<td>$</td>
+						<td><input id="expense3" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Public Transportation Monthly Pass</td>
+						<td>$</td>
+						<td><input id="expense4" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Groceries</td>
+						<td>$</td>
+						<td><input id="expense5" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Water/Electricity</td>
+						<td>$</td>
+						<td><input id="expense6" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Gas</td>
+						<td>$</td>
+						<td><input id="expense7" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Cable/Internet</td>
+						<td>$</td>
+						<td><input id="expense8" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Cell Phone Bill</td>
+						<td>$</td>
+						<td><input id="expense9" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Cell Phone Monthly Installment</td>
+						<td>$</td>
+						<td><input id="expense10" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Credit Card Monthly Payment</td>
+						<td>$</td>
+						<td><input id="expense11" type = "number"></td>
+					</tr>
+					<tr>
+						<td>Miscellaneous</td>
+						<td>$</td>
+						<td><input id="expense12" type = "number"></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td bgcolor = "skyblue">Budget Total</td>
+						<td bgcolor = "skyblue">$</td>
+						<td id="total" bgcolor = "skyblue"></td>
+					</tr>
+				</tfoot>
+			</div>
+			</table>
+			<script>
+			
+			function calculateBudget() {
+            
+				var checkingAccount = document.getElementById('checkingAccount').value;
+				var employmentIncome = document.getElementById('employmentIncome').value;
+				var additionalIncome = document.getElementById('additionalIncome').value;
+				var savingsAccount = document.getElementById('savingsAccount').value;
+				var expense1 = document.getElementById('expense1').value;
+				var expense2 = document.getElementById('expense2').value;
+				var expense3 = document.getElementById('expense3').value;
+				var expense4 = document.getElementById('expense4').value;
+				var expense5 = document.getElementById('expense5').value;
+				var expense6 = document.getElementById('expense6').value;
+				var expense7 = document.getElementById('expense7').value;
+				var expense8 = document.getElementById('expense8').value;
+				var expense9 = document.getElementById('expense9').value;
+				var expense10 = document.getElementById('expense10').value;
+				var expense11 = document.getElementById('expense11').value;
+				var expense12 = document.getElementById('expense12').value;
+				
+				if (!checkingAccount) {
+					checkingAccount = 0;
+				}
+				if (!employmentIncome) {
+					employmentIncome = 0;
+				}
+				if (!additionalIncome) {
+					additionalIncome = 0;
+				}
+				if (!savingsAccount) {
+					savingsAccount = 0;
+				}
+				if (!expense1) {
+					expense1 = 0;
+				}
+				if (!expense2) {
+					expense2 = 0;
+				}
+				if (!expense3) {
+					expense3 = 0;
+				}
+				if (!expense4) {
+					expense4 = 0;
+				}
+				if (!expense5) {
+					expense5 = 0;
+				}
+				if (!expense6) {
+					expense6 = 0;
+				}
+				if (!expense7) {
+					expense7 = 0;
+				}
+				if (!expense8) {
+					expense8 = 0;
+				}
+				if (!expense9)	{
+					expense9 = 0;
+				}
+				if (!expense10)	{
+					expense10 = 0;
+				}
+				if (!expense11)	{
+					expense11 = 0;
+				}
+				if (!expense12)	{
+					expense12 = 0;
+				}
+				
+				var totalTd = document.getElementById('total');
+
+				var totalValue = parseFloat(checkingAccount) + parseFloat(employmentIncome) 
+					+ parseFloat(additionalIncome) + parseFloat(savingsAccount) - parseFloat(expense1) 
+					- parseFloat(expense2) - parseFloat(expense3) - parseFloat(expense4)
+					- parseFloat(expense5) - parseFloat(expense6) - parseFloat(expense7)
+					- parseFloat(expense8) - parseFloat(expense9) - parseFloat(expense10) 
+					- parseFloat(expense11) - parseFloat(expense12);
+				totalTd.textContent = totalValue.toFixed(2);
+			}
+       
+			document.getElementById('checkingAccount').addEventListener('change', calculateBudget);
+			document.getElementById('employmentIncome').addEventListener('change', calculateBudget);
+			document.getElementById('additionalIncome').addEventListener('change', calculateBudget);
+			document.getElementById('savingsAccount').addEventListener('change', calculateBudget);
+			document.getElementById('expense1').addEventListener('change', calculateBudget);
+			document.getElementById('expense2').addEventListener('change', calculateBudget);
+			document.getElementById('expense3').addEventListener('change', calculateBudget);
+			document.getElementById('expense4').addEventListener('change', calculateBudget);
+			document.getElementById('expense5').addEventListener('change', calculateBudget);
+			document.getElementById('expense6').addEventListener('change', calculateBudget);
+			document.getElementById('expense7').addEventListener('change', calculateBudget);
+			document.getElementById('expense8').addEventListener('change', calculateBudget);
+			document.getElementById('expense9').addEventListener('change', calculateBudget);
+			document.getElementById('expense10').addEventListener('change', calculateBudget);
+			document.getElementById('expense11').addEventListener('change', calculateBudget);
+			document.getElementById('expense12').addEventListener('change', calculateBudget);
+			</script>
+		</body>
+		
+		<body>`
+			<form method = "post" autocomplete = "on" onsubmit = "return confirm('Do you really want to submit the form?');" id="evaluation-color-form">
+				<p>
+					<label for = "txtList"><strong>Rate the quality structure of this budget:</strong>
+					<input type = "text" id = "txtList"
+						placeholder = "Select the rate of this budget" list = "rating" />
+					<datalist id = "rating">
+						<option value = "Excellent">
+						<option value = "Above Average">
+						<option value = "Average">
+						<option value = "Poor">
+						<option value = "Needs Improvement">
+						</label></p>
+				
+				<p>
+					<strong>Comments about how the structure of this budget?</strong>
+					Write below to give us your personal opinion.
+				
+					<textarea>Enter comment...</textarea>
+				</p>
+				
+				<p>
+					<input type = "submit" value = "Submit" />
+					<input type = "reset"  value = "Clear" />
+				</p>
+			</form>
+			<script>
+				function validate(form) 	{
+				
+					if (!valid) 	{
+						alert('Please correct the errors in the form!');
+						return false;
+					}
+					else {
+					return confirm('Do you really want to submit the form?');
+					}
+				}
+				</script>
+				<form onsubmit = "return validate(this);">
+		</body>
+	</head>
+</html>
